@@ -10,9 +10,9 @@ export function SystemPage() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-8"
+          className="text-center mb-10"
         >
-          <h1 className="text-4xl md:text-5xl font-bold mb-3">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">
             <span className="text-gradient">Prinsip Kerja</span>
           </h1>
           <p className="text-lg text-white/70">Sistem Konversi Energi</p>
@@ -23,13 +23,13 @@ export function SystemPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="glass-card p-6 mb-6"
+          className="glass-card p-6 mb-8"
         >
           <SystemFlowDiagram />
         </motion.div>
 
         {/* Component Details */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           <InfoCard
             title="Turbin Spiral Archimedes"
             description="Mengkonversi energi kinetik angin menjadi energi mekanik rotasi. Geometri spiral menghasilkan torsi awal tinggi untuk operasi pada angin berkecepatan rendah."

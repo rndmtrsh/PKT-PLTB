@@ -21,16 +21,16 @@ export function AnalyticsPage({ isActive }: AnalyticsPageProps) {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-6"
+          className="text-center mb-8"
         >
-          <h1 className="text-4xl md:text-5xl font-bold mb-3">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">
             <span className="text-gradient">Hasil Pengujian</span>
           </h1>
           <p className="text-lg text-white/70">Data Analitik & Performa Sistem</p>
         </motion.div>
 
         {/* KPI Cards */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
           <KPICard
             title="Tegangan Maksimum"
             value={maxVoltage}
@@ -89,7 +89,7 @@ export function AnalyticsPage({ isActive }: AnalyticsPageProps) {
         </div>
 
         {/* Charts Grid */}
-        <div className="grid lg:grid-cols-2 gap-5 mb-6 flex-1">
+        <div className="grid lg:grid-cols-2 gap-6 mb-8 flex-1">
           <VoltageChart />
           <CurrentChart />
           <PowerChart />

@@ -10,16 +10,16 @@ export function ProblemPage() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-8"
+          className="text-center mb-10"
         >
-          <h1 className="text-4xl md:text-5xl font-bold mb-3">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">
             <span className="text-gradient">Latar Masalah</span>
           </h1>
           <p className="text-lg text-white/70">& Urgensi Pengembangan</p>
         </motion.div>
 
         {/* Main Content */}
-        <div className="space-y-6">
+        <div className="space-y-8">
           {/* Introduction */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}

@@ -29,10 +29,10 @@ export const config = {
     // STL file path (relative to public folder)
     stlPath: '/models/turbin.stl',
     // Camera settings - positioned for optimal initial view
-    cameraPosition: [3, 3, 3] as [number, number, number],
-    // Orbit controls limits - allow zoom from very close to far
-    minDistance: 1.5,
-    maxDistance: 15,
+    cameraPosition: [4, 4, 4] as [number, number, number],
+    // Orbit controls limits - allow zoom from very close to container size
+    minDistance: 1,
+    maxDistance: 20,
     // Auto-rotate speed
     autoRotateSpeed: 2,
   },

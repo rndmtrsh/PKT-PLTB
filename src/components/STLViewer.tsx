@@ -30,7 +30,7 @@ function TurbineModel({ url }: TurbineModelProps) {
     box.getSize(size);
   }
   const maxDim = Math.max(size.x, size.y, size.z);
-  const scale = 4.5 / maxDim;  // Large initial scale for prominent display
+  const scale = 5.5 / maxDim;  // Large initial scale for prominent display
 
   return (
     <Center>
@@ -101,18 +101,18 @@ export function STLViewer({ isActive }: STLViewerProps) {
   }
 
   return (
-    <div className="relative w-full h-full min-h-[550px] rounded-2xl overflow-hidden bg-gradient-to-br from-slate-900/50 to-slate-800/50 border border-white/10 flex items-center justify-center">
+    <div className="relative w-full h-full min-h-[500px] rounded-2xl overflow-hidden bg-gradient-to-br from-slate-900/50 to-slate-800/50 border border-white/10">
       <Suspense fallback={<LoadingFallback />}>
         <Canvas
           camera={{
             position: cameraPosition,
-            fov: 45,
+            fov: 40,
             near: 0.1,
             far: 1000,
           }}
           gl={{ antialias: true, alpha: true }}
           dpr={[1, 2]}
-          style={{ width: '100%', height: '100%' }}
+          style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
         >
           <Scene />
         </Canvas>
