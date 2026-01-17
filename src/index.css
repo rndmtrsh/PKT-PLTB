@@ -38,9 +38,17 @@ body {
   background: linear-gradient(135deg, var(--color-darker) 0%, var(--color-dark) 50%, #1e1b4b 100%);
   color: #f1f5f9;
   min-height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Desktop: prevent scrolling for kiosk mode */
+@media (min-width: 1024px) {
+  body {
+    overflow: hidden;
+  }
 }
 
 #root {

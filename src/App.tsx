@@ -55,12 +55,12 @@ function App() {
   ];
 
   return (
-    <div className="relative min-h-screen overflow-hidden">
+    <div className="relative min-h-screen overflow-x-hidden lg:overflow-hidden">
       {/* Background Animation */}
       <BackgroundAnimation />
 
       {/* Page Content */}
-      <main className="relative z-10">
+      <main className="relative z-10 overflow-y-auto lg:overflow-visible">
         <PageTransition pageKey={currentPage}>
           {renderPage()}
         </PageTransition>
@@ -79,7 +79,7 @@ function App() {
       />
 
       {/* Page indicator (always visible) */}
-      <div className="fixed top-6 right-6 z-50 glass-card px-4 py-2 text-sm">
+      <div className="fixed top-4 right-4 lg:top-6 lg:right-6 z-50 glass-card px-3 py-1.5 lg:px-4 lg:py-2 text-xs lg:text-sm">
         <span className="text-cyan-400 font-medium">{pageNames[currentPage]}</span>
       </div>
 
