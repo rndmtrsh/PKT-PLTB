@@ -4,7 +4,7 @@ import { SystemFlowDiagram, InfoCard } from '../components';
 export function SystemPage() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center px-8 py-6">
-      <div className="max-w-[1600px] w-full">
+      <div className="max-w-7xl w-full">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
