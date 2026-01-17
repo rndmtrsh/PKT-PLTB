@@ -19,7 +19,7 @@ export function ProblemPage() {
         </motion.div>
 
         {/* Main Content */}
-        <div className="space-y-8">
+        <div className="space-y-12">
           {/* Introduction */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -47,23 +47,23 @@ export function ProblemPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="grid md:grid-cols-3 gap-5"
+            className="grid md:grid-cols-3 gap-6 mt-4"
           >
-            <div className="glass-card p-5 text-center">
+            <div className="glass-card p-5 text-center border border-white/10">
               <div className="text-3xl mb-3">🔊</div>
               <h3 className="text-lg font-semibold mb-2">Kebisingan</h3>
               <p className="text-white/60 text-sm">
                 Turbin konvensional menghasilkan noise yang mengganggu kenyamanan warga perkotaan
               </p>
             </div>
-            <div className="glass-card p-5 text-center">
+            <div className="glass-card p-5 text-center border border-white/10">
               <div className="text-3xl mb-3">👥</div>
               <h3 className="text-lg font-semibold mb-2">Penerimaan Masyarakat</h3>
               <p className="text-white/60 text-sm">
                 Desain estetis diperlukan agar dapat diterima di lingkungan padat penduduk
               </p>
             </div>
-            <div className="glass-card p-5 text-center">
+            <div className="glass-card p-5 text-center border border-white/10">
               <div className="text-3xl mb-3">⚠️</div>
               <h3 className="text-lg font-semibold mb-2">Keselamatan</h3>
               <p className="text-white/60 text-sm">
@@ -83,19 +83,19 @@ export function ProblemPage() {
               Mengapa Turbin Spiral Archimedes?
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
-              <div>
+              <div className="border border-white/10 rounded-lg p-4">
                 <div className="text-3xl font-bold text-cyan-400">1-5</div>
                 <div className="text-sm text-white/60">m/s Cut-in Speed</div>
               </div>
-              <div>
+              <div className="border border-white/10 rounded-lg p-4">
                 <div className="text-3xl font-bold text-purple-400">High</div>
                 <div className="text-sm text-white/60">Starting Torque</div>
               </div>
-              <div>
+              <div className="border border-white/10 rounded-lg p-4">
                 <div className="text-3xl font-bold text-emerald-400">Low</div>
                 <div className="text-sm text-white/60">Noise Level</div>
               </div>
-              <div>
+              <div className="border border-white/10 rounded-lg p-4">
                 <div className="text-3xl font-bold text-yellow-400">Safe</div>
                 <div className="text-sm text-white/60">Urban Installation</div>
               </div>

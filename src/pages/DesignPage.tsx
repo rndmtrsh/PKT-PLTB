@@ -1,5 +1,48 @@
 import { motion } from 'framer-motion';
+import { Suspense } from 'react';
+import { Canvas, useFrame, useLoader } from '@react-three/fiber';
+import { OrbitControls, Environment, Center } from '@react-three/drei';
+import { STLLoader } from 'three/examples/jsm/loaders/STLLoader.js';
 import { FeatureCard } from '../components';
+import { config } from '../config';
+import { useRef } from 'react';
+import * as THREE from 'three';
+
+// Mini STL Viewer for DesignPage
+function MiniTurbineModel({ url }: { url: string }) {
+  const geometry = useLoader(STLLoader, url);
+  const meshRef = useRef<THREE.Mesh>(null);
+
+  useFrame((_, delta) => {
+    if (meshRef.current) {
+      meshRef.current.rotation.y += delta * 0.5;
+    }
+  });
+
+  geometry.computeBoundingBox();
+  geometry.center();
+
+  const box = geometry.boundingBox;
+  const size = box ? new THREE.Vector3() : new THREE.Vector3(1, 1, 1);
+  if (box) {
+    box.getSize(size);
+  }
+  const maxDim = Math.max(size.x, size.y, size.z);
+  const scale = 3.5 / maxDim;
+
+  return (
+    <Center>
+      <mesh ref={meshRef} geometry={geometry} scale={[scale, scale, scale]}>
+        <meshStandardMaterial
+          color="#22d3ee"
+          metalness={0.6}
+          roughness={0.3}
+          envMapIntensity={0.8}
+        />
+      </mesh>
+    </Center>
+  );
+}
 
 export function DesignPage() {
   return (
@@ -31,49 +74,25 @@ export function DesignPage() {
               Geometri Spiral Archimedes
             </h2>
             
-            {/* Spiral Illustration */}
-            <div className="relative h-48 mb-5 flex items-center justify-center">
-              <motion.svg
-                viewBox="0 0 200 200"
-                className="w-48 h-48"
-                animate={{ rotate: 360 }}
-                transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
+            {/* Spiral 3D Model */}
+            <div className="relative h-52 mb-5 flex items-center justify-center rounded-lg overflow-hidden bg-black/20">
+              <Canvas
+                camera={{ position: [3, 3, 3], fov: 45 }}
+                style={{ width: '100%', height: '100%' }}
               >
-                {/* True Archimedes Spiral - 3 blade VAWT design */}
-                <defs>
-                  <linearGradient id="spiralGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#22d3ee" />
-                    <stop offset="100%" stopColor="#a78bfa" />
-                  </linearGradient>
-                </defs>
-                {/* Blade 1 - Archimedes spiral curve */}
-                <path
-                  d="M100,100 C100,85 105,70 115,60 C130,45 150,40 165,50 C175,58 180,75 175,90 C170,105 155,115 140,115"
-                  fill="none"
-                  stroke="url(#spiralGradient)"
-                  strokeWidth="4"
-                  strokeLinecap="round"
+                <ambientLight intensity={0.5} />
+                <directionalLight position={[10, 10, 5]} intensity={1} />
+                <pointLight position={[0, 5, 0]} intensity={0.5} color="#22d3ee" />
+                <Suspense fallback={null}>
+                  <MiniTurbineModel url={config.viewer3D.stlPath} />
+                  <Environment preset="city" />
+                </Suspense>
+                <OrbitControls
+                  enablePan={false}
+                  enableZoom={false}
+                  autoRotate={false}
                 />
-                {/* Blade 2 - rotated 120° */}
-                <path
-                  d="M100,100 C113,108 122,120 125,135 C128,155 120,175 105,182 C92,188 75,182 65,170 C55,158 55,140 65,128"
-                  fill="none"
-                  stroke="url(#spiralGradient)"
-                  strokeWidth="4"
-                  strokeLinecap="round"
-                />
-                {/* Blade 3 - rotated 240° */}
-                <path
-                  d="M100,100 C87,92 73,90 60,95 C42,102 28,120 28,140 C28,155 40,168 55,172 C72,176 88,168 95,153"
-                  fill="none"
-                  stroke="url(#spiralGradient)"
-                  strokeWidth="4"
-                  strokeLinecap="round"
-                />
-                {/* Center hub */}
-                <circle cx="100" cy="100" r="8" fill="#22d3ee" />
-                <circle cx="100" cy="100" r="4" fill="#0f172a" />
-              </motion.svg>
+              </Canvas>
             </div>
 
             <p className="text-white/80 leading-relaxed mb-4 text-base">

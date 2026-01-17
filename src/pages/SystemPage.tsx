@@ -29,7 +29,7 @@ export function SystemPage() {
         </motion.div>
 
         {/* Component Details */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 [&>*]:border [&>*]:border-white/10">
           <InfoCard
             title="Turbin Spiral Archimedes"
             description="Mengkonversi energi kinetik angin menjadi energi mekanik rotasi. Geometri spiral menghasilkan torsi awal tinggi untuk operasi pada angin berkecepatan rendah."

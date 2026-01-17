@@ -11,7 +11,7 @@ export function HomePage() {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-center max-w-5xl w-full"
+        className="flex flex-col items-center justify-center text-center max-w-5xl w-full mx-auto"
       >
         {/* Badge */}
         <motion.div
@@ -30,7 +30,7 @@ export function HomePage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8"
+          className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 text-center"
         >
           <span className="text-gradient">PLTB</span>
           <br />
@@ -42,7 +42,7 @@ export function HomePage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="text-xl md:text-2xl text-white/70 max-w-4xl mx-auto mb-10 leading-relaxed"
+          className="text-xl md:text-2xl text-white/70 max-w-4xl mx-auto mb-10 leading-relaxed text-center"
         >
           Pembangkit Listrik Tenaga Bayu Skala Kecil untuk Aplikasi Perkotaan
         </motion.p>
@@ -52,7 +52,7 @@ export function HomePage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.7 }}
-          className="glass-card p-8 max-w-4xl mx-auto mb-10 flex items-center justify-center"
+          className="glass-card p-8 max-w-4xl w-full mx-auto mb-10"
         >
           <h2 className="text-lg md:text-xl text-white/80 leading-relaxed text-center">
             {project.title}
@@ -64,7 +64,7 @@ export function HomePage() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.9 }}
-          className="flex items-center justify-center gap-3 text-white/60 text-base mb-6"
+          className="flex items-center justify-center gap-3 text-white/60 text-base mb-6 w-full"
         >
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
