@@ -23,13 +23,13 @@ export function SystemPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="glass-card p-6 mb-8"
+          className="glass-card p-8 mb-12 border border-white/10"
         >
           <SystemFlowDiagram />
         </motion.div>
 
         {/* Component Details */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 [&>*]:border [&>*]:border-white/10">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 [&>*]:border [&>*]:border-white/10">
           <InfoCard
             title="Turbin Spiral Archimedes"
             description="Mengkonversi energi kinetik angin menjadi energi mekanik rotasi. Geometri spiral menghasilkan torsi awal tinggi untuk operasi pada angin berkecepatan rendah."

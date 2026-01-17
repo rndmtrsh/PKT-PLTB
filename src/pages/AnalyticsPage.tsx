@@ -101,9 +101,9 @@ export function AnalyticsPage({ isActive }: AnalyticsPageProps) {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="glass-card p-8"
+          className="glass-card p-10"
         >
-          <h3 className="text-xl font-semibold mb-6 text-center text-cyan-400">
+          <h3 className="text-xl font-semibold mb-8 text-center text-cyan-400">
             Kesimpulan Hasil Pengujian
           </h3>
           

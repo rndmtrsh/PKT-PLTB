@@ -25,7 +25,7 @@ export function CreditsPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="glass-card p-8 mb-10 text-center"
+          className="glass-card p-10 mb-10 text-center"
         >
           <h2 className="text-xl md:text-2xl text-white/80 leading-relaxed">
             {project.title}
@@ -70,7 +70,7 @@ export function CreditsPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="glass-card p-10 text-center"
+          className="glass-card p-12 text-center"
         >
           <h3 className="text-2xl font-semibold mb-8 text-purple-400">
             Dosen Pengampu

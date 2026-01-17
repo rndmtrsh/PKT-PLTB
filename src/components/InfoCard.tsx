@@ -14,9 +14,9 @@ export function InfoCard({ title, description, icon, delay = 0 }: InfoCardProps)
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay }}
-      className="glass-card p-5 hover:bg-white/10 transition-colors"
+      className="glass-card p-6 hover:bg-white/10 transition-colors"
     >
-      <div className="flex items-start gap-4">
+      <div className="flex items-start gap-5">
         <div className="flex-shrink-0 p-3 rounded-lg bg-gradient-to-br from-cyan-500/20 to-purple-500/20 text-cyan-400 [&_svg]:w-6 [&_svg]:h-6">
           {icon}
         </div>
@@ -56,7 +56,7 @@ export function FeatureCard({ title, features, icon, color = 'cyan', delay = 0 }
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5, delay }}
       className={`
-        rounded-xl p-5 
+        rounded-xl p-6 
         bg-gradient-to-br ${featureColorClasses[color]}
         border
       `}

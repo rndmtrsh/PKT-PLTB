@@ -19,15 +19,15 @@ export function ProblemPage() {
         </motion.div>
 
         {/* Main Content */}
-        <div className="space-y-12">
+        <div className="space-y-16">
           {/* Introduction */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="glass-card p-6"
+            className="glass-card p-8 border border-white/10"
           >
-            <h2 className="text-xl font-semibold mb-3 text-cyan-400">
+            <h2 className="text-xl font-semibold mb-4 text-cyan-400">
               Tantangan Energi Angin di Perkotaan
             </h2>
             <p className="text-base text-white/80 leading-relaxed">
@@ -47,23 +47,23 @@ export function ProblemPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="grid md:grid-cols-3 gap-6 mt-4"
+            className="grid md:grid-cols-3 gap-8"
           >
-            <div className="glass-card p-5 text-center border border-white/10">
+            <div className="glass-card p-6 text-center border border-white/10">
               <div className="text-3xl mb-3">🔊</div>
               <h3 className="text-lg font-semibold mb-2">Kebisingan</h3>
               <p className="text-white/60 text-sm">
                 Turbin konvensional menghasilkan noise yang mengganggu kenyamanan warga perkotaan
               </p>
             </div>
-            <div className="glass-card p-5 text-center border border-white/10">
+            <div className="glass-card p-6 text-center border border-white/10">
               <div className="text-3xl mb-3">👥</div>
               <h3 className="text-lg font-semibold mb-2">Penerimaan Masyarakat</h3>
               <p className="text-white/60 text-sm">
                 Desain estetis diperlukan agar dapat diterima di lingkungan padat penduduk
               </p>
             </div>
-            <div className="glass-card p-5 text-center border border-white/10">
+            <div className="glass-card p-6 text-center border border-white/10">
               <div className="text-3xl mb-3">⚠️</div>
               <h3 className="text-lg font-semibold mb-2">Keselamatan</h3>
               <p className="text-white/60 text-sm">
@@ -77,9 +77,9 @@ export function ProblemPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
-            className="glass-card p-6 text-center"
+            className="glass-card p-8 text-center border border-white/10"
           >
-            <h3 className="text-lg font-semibold mb-4 text-white/90">
+            <h3 className="text-lg font-semibold mb-6 text-white/90">
               Mengapa Turbin Spiral Archimedes?
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-5">

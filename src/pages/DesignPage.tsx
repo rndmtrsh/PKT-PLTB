@@ -68,9 +68,9 @@ export function DesignPage() {
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="glass-card p-6"
+            className="glass-card p-8"
           >
-            <h2 className="text-xl font-semibold mb-4 text-cyan-400">
+            <h2 className="text-xl font-semibold mb-5 text-cyan-400">
               Geometri Spiral Archimedes
             </h2>
             
